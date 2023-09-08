@@ -5,8 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./styles/styles.css">
-  <script type = "text/javascript" src = "add.js">
-    window.onload = displaySum();
+  <script>
+  function displaySum() {
+    let firstNum = Number(document.getElementById('firstNum').innerHTML)
+    let secondNum = Number(document.getElementById('secondNum').innerHTML)
+    
+    let total = firstNum + secondNum;
+    document.getElementById("answer").innerHTML = ` ${firstNum} + ${secondNum}, equals to ${total}` ;
+  }
+  
+  document.getElementById('sumButton').addEventListener("click", displaySum);
   </script>
   <title>Document</title>
 </head>
