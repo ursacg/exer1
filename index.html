@@ -40,6 +40,16 @@
   }
   
   document.getElementById("sumButton").addEventListener("click", displaySum);
+
+  function displayQuotient(){
+    let firstDivideNum = Number(document.getElementById('firstNum').innerHTML)
+    let secondDivideNum = Number(document.getElementById('secondNum').innerHTML)
+
+    let quotient = firstDivideNum / secondDivideNum;
+    document.getElementById("divideButton").innerHTML = ` ${firstDivideNum} / ${secondDivideNum}, equals to ${quotient}`;
+  }
+
+  document.getElementById("answerDivide").addEventListener("click", displayQuotient);
   </script>
 </body>
 </html>
